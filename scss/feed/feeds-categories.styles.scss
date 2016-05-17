@@ -1,0 +1,278 @@
+.feeds-categories-view
+{
+	background-color: $content-bg !important;
+
+	.categories-list
+	{
+		
+	}
+
+	.feed-category
+	{
+		// THIS IS FUCKING AWESOME: http://caniuse.com/#feat=viewport-units
+		@include calc(height, "50vw - 30px");
+		box-shadow: 0 1px 3px rgba(darken($feed-category-bg, 30%), 0.3);
+		border-radius: 2px;
+		position: relative;
+		display: block;
+
+		.category-image
+		{
+			border-radius: 2px;
+            width: 100%;
+			height: 100%;
+			
+		}
+
+		.category-bg
+		{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(rgba(darken($feed-category-bg, 80%), .85), rgba(darken($feed-category-bg, 10%), .3) 40%, rgba($feed-category-bg, .3) 60%, rgba(lighten($feed-category-bg, 10%), .3));
+		}
+
+		.category-title
+		{
+			color: $feed-category-color;
+			position: absolute;
+			top: 12px;
+			left: 8px;
+			font-weight: 500;
+			text-transform: capitalize;
+            font-family: 'Roboto';
+            color: #ecf0f1;
+            font-size: 18px; 
+            
+		}
+	}
+
+  .post-author
+    {
+      font-weight: 400;
+      margin-top: 15px;
+      margin-left: 55px;
+      font-size: 14px;
+    }
+
+    .post-title
+    {
+      
+      font-family: 'Roboto';
+    }
+}
+
+.bookmarks-view
+{
+  background-color: $content-bg;
+
+  .scroll-content .scroll,
+  .bookmarks-container
+  {
+    height: 100%;
+  }
+
+  .empty-results
+  {
+    text-align: center;
+
+    .icon
+    {
+      font-size: 170px;
+      color: lighten($content-bg, 10);
+    }
+
+    .no-bookmarks
+    {
+      color: darken($content-bg, 10);
+      font-size: 22px;
+    }
+  }
+
+
+  .bookmarks-list
+  {
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  // Fix scrollbar style introduced on ionic v1rc1
+  .bookmarks-list::-webkit-scrollbar
+  {
+    display: none !important;
+    width: 0 !important;
+  }
+
+  .bookmark-item
+  {
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(darken($content-color, 15), .2);
+    margin: 0px 16px;
+
+    *
+    {
+      text-decoration: none;
+      color: $content-color;
+    }
+
+    .post-title
+    {
+      margin: 0px;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: -1px;
+      font-family: 'Roboto';
+    }
+
+    .post-date
+    {
+      margin: 0px;
+      font-size: 12px;
+      font-weight: 200;
+      color: rgba(lighten($content-color, 10), .7);
+    }
+
+    .post-time
+    {
+      color: rgba(darken($content-color, 10), .9);
+    }
+  }
+}
+
+.wordpress-view
+{
+  background-color: $content-bg !important;
+  vertical-align:middle;
+
+  .post-heading
+  {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: darken($wordpress-heading-color, 10%);
+    border-color: #000;
+
+    .post-title
+    {
+      color: $wordpress-title-color;
+      font-family: 'Roboto';
+    }
+
+    .post-author
+    {
+      font-weight: 500;
+      margin-top: 15px;
+    }
+  }
+
+  .post-content
+  {
+    padding-top: 8px;
+    padding-bottom: 0px;
+
+    .post-excerpt
+    {
+      overflow: hidden;
+			text-overflow: ellipsis;
+			@include display(flex);
+			@include flex-direction(column);
+      line-height: $post-font-size + 4;        /* fallback */
+      font-size: $post-font-size;        /* fallback */
+
+      *
+      {
+        font-size: inherit !important;
+      }
+    }
+
+    // Audio fix
+    .wp-audio-shortcode
+    {
+      visibility: visible !important;
+    }
+
+    // Fix audio tag not displaying to 100% on ios
+    audio::-webkit-media-controls-panel
+    {
+      width: 100% !important;
+    }
+
+    img
+    {
+      margin: 10px 0px;
+      height: auto;
+      @include calc(width, "100% + #{($sides-padding*2)}");
+      margin-left: - $sides-padding;
+    }
+
+    ul, ol
+    {
+      list-style-type: square;
+      padding: 0 0 0 40px;
+      margin: 14px 0px;
+    }
+
+    iframe
+    {
+      margin: 10px 0px;
+      height: auto;
+      @include calc(width, "100% + #{($sides-padding*2)}");
+      margin-left: - $sides-padding;
+    }
+
+    blockquote
+    {
+      font-style: italic;
+      font-weight: 300;
+      margin: 20px 20px;
+      border: none;
+      padding: 0px;
+
+      p
+      {
+        font-size: 16px;
+      }
+    }
+
+    .post-actions
+    {
+      padding: 10px 0px;
+
+      .col
+      {
+        padding:0px;
+      }
+
+      .bookmark
+      {
+        .ion-bookmark
+        {
+          min-height: initial;
+          line-height: 28px;
+          padding: 0px;
+        
+            
+        }
+
+        .ion-bookmark:before
+        {
+          font-size: 28px;
+          line-height: 28px;
+            background-color: #54b948;
+        }
+      }
+
+      .read-more
+      {
+        .button
+        {
+          margin:0px;
+            
+            
+        }
+      }
+    }
+  }
+}
+

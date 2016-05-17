@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"date": "October 09, 2015",
+		"tags": "ENTERPRISE MOBILITY",
+		"title": "Reset Microsoft Intune's Mobile Device Management Authority",
+		"body": "When an IT administrator deploys a brand new Microsoft Intune subscription there is an important decision that needs to be made. That decision is whether to make Microsoft Intune or System Center 2012 Configuration Manager your Mobile Device Management Authority.",
+		"author": "Jesse Garcia",
+		"pic": "jesse_garcia"
+	},
+	{
+		"id": 2,
+		"date": "October 08, 2015",
+		"tags": "OFFICE 365, SEARCH, SHAREPOINT",
+		"title": "Display User Profile Picture in O365 using a Content Search Web Part",
+		"body": "If you have ever tried to display a user’s profile picture that is stored in their SharePoint Online user profile you will have noticed an issue.  When you configure everything just right and log onto the page for the first time you wont see their picture.  All you see is the wonderful grey box with a question mark like this:",
+		"author": "Drew Madelung",
+		"pic": "drew_madelung"
+	},
+	{
+		"id": 3,
+		"date": "September 30, 2015",
+		"tags": "",
+		"title": "Three Macro User Personas Walk into a Bar & the Art of What Makes Us the Same",
+		"body": "There is a reason why a lot of classical jokes start out with 3 individuals walking into a bar. It isn’t because the punchline to these jokes are any better than “Why did the Chicken Cross The Road?” or “Knock-Knock… […]",
+		"author": "Damon Sanchez",
+		"pic": "damon_sanchez"
+	}
+]

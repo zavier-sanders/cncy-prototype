@@ -1,0 +1,113 @@
+ion-side-menu
+{
+	ion-content
+	{
+		background-color: #2f363f;
+	}
+
+	ion-item.item
+	{
+		border:none;
+		
+		border-color: #2f363f;
+
+		.item-content
+		{
+			background-color: #2f363f;
+            font-family: 'Roboto';
+            font-weight: 300;
+            
+
+			.icon:before
+			{
+				
+				color: $main-menu-color;
+				
+				line-height: 32px;
+			}
+            
+            
+		}
+
+		.item-content.activated
+		{
+			background-color: lighten($main-menu-bg, 10);
+            
+            
+            .icon
+			{
+				
+				color: #54b948;
+				
+				line-height: 32px;
+			}
+            h2
+            {
+                color: #0396d7;
+                font-family: 'Roboto';
+                font-weight:600;
+            }
+		}
+
+		.menu-text
+		{
+			color: $main-menu-color;
+            font-family: 'Roboto';
+			font-weight:300;
+            line-height:normal;
+		}
+	}
+
+	ion-item.item:first-child
+	{
+		border-top:none;
+	}
+
+	ion-item.item:last-child
+	{
+		border-bottom:none;
+	}
+
+	.heading-item
+	{
+        font-family: 'Roboto';
+        font-weight: 400;
+        
+		.item-content
+		{
+			height: 120px;
+			padding-top: 45px;
+			padding-left: 115px;
+			background-color: darken($main-menu-bg, 10);
+			padding-bottom: 0px;
+		}
+
+		.user-image-container
+		{
+			width:90px;
+			position: absolute;
+		  top: 16px;
+		  left: 12px;
+
+			.user-image
+			{
+				border-radius: 50%;
+				padding: 8px;
+				border: 1px solid $main-menu-color;
+				width: 100%;
+			}
+		}
+
+		.greeting
+		{
+            
+			color: $main-menu-color;
+			font-weight:500;
+		}
+
+		.message
+		{
+			color: darken($main-menu-color, 12);
+		}
+	}
+}

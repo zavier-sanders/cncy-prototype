@@ -1,0 +1,29 @@
+<ion-view title="About Our Company" class="about-view">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+        	<div class="row-top">
+        		<img ng-src="img/cncy_logo.png"></img>
+    		    
+    		</div>
+        	<div class="padding">
+    	    	
+    	    		<h2>About Our Company</h2> 
+    	    		<p>Founded in 1989, Concurrency, Inc. provides expert guidance to plan and deploy IT solutions that increase business productivity. Concurrency helps organizations leverage best practices to improve productivity with project, service, process, and content management solutions. We are expert in core Microsoft platforms including System Center, Azure, SharePoint, Lync, Exchange, Office 365, and Dynamics CRM.</p>
+        	</div>
+
+        	<i class="padding icon ion-trophy"><span style="font-size: 18px;"> Awards</span></i>  
+        	
+        	<div class="footer">	  
+    	        <hscroller>
+    	        	<hcard ng-repeat="item in awards" index="{{$index}}" desc="{{item.desc}}" image="{{item.image}}" ></hcard>
+    	      	</hscroller>
+          	</div>
+
+
+	</ion-content>
+
+    <ion-list>
+</ion-view>

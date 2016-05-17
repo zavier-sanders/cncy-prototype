@@ -1,0 +1,51 @@
+<ion-view title="Events" class="events-upcoming-view">
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+  <ion-content>
+              <ion-list>
+               <ion-item ng-repeat="event in events | orderBy: 'event.start.local' " class="card" ng-click="openLink(event.url)">
+                
+                    <div class=" ">
+                      <img src="https://cdn.evbuc.com/eventlogos/99218/sharepointsummit-1.jpg"
+                      alt="SharePoint Summit" />
+                      <span id="SPAN_7">FREE</span><span id="SPAN_8"></span>
+                    </div>
+
+
+                  <div class="item item-body">
+                   
+                    
+                    <h3>
+                      {{event.name.text}}
+                    </h3>
+                    <p>{{event.description.text | strLimit:150 }}</p>
+                  </div>
+
+                  <div class="row">
+                    <div class="col col-66 padding-top padding-left">
+                       <i class="icon ion-clock"><span id="TIME">{{event.start.local | datetime}}{{event.time}}</span></i>
+                      
+                    </div>
+                    <div class="col col-33">
+                       
+                      <button class="button button-small button-block button-balanced" >Register</button>
+                    </div>
+                  </div>
+                </ion-item>
+
+                <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+                </ion-refresher>
+
+                <!-- Infinit scroll -->
+                <ion-infinite-scroll ng-if="moreDataCanBeLoaded()" on-infinite="loadMoreData()" distance="1%" icon="ion-loading-c">
+                </ion-infinite-scroll>
+              </ion-list>
+              
+                
+                
+
+            </ion-content>
+</ion-view>

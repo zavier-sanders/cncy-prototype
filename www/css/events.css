@@ -1,0 +1,23 @@
+/* === CCI Journalist Press Card === */ 
+.cci-press-card__wrap
+
+ .cci-press-card.card--front 
+  header.press-card__header
+  section.press-card__content
+   div.journalist-name.animated.fadeInLeft data-journalist-name="Lasse Chor" 
+   span.journalist-title Happiest Man Alive
+  footer.press-card__footer
+   h4 Lasse's Latest Articles
+   div.article-link Why Startups Succeed
+   div.article-link PCI's Next Big Opportunity
+
+   div#flipTrigger 
+    ' Tap to view Lasse's Instagram
+    span.triggerImage ➜
+  
+ .cci-press-card.card--back
+  <iframe src="http://snapwidget.com/in/?h=c3RhcnR1cHN8aW58NzV8NHw0fHxub3wwfG5vbmV8b25TdGFydA==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:300px; height: 300px" ></iframe>
+  
+  div#flipTrigger.padded 
+   span.triggerImage
+   ' Tap here to go back

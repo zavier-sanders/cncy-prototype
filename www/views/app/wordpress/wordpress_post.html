@@ -1,0 +1,40 @@
+<ion-view class="post-view">
+  <ion-content>
+    <div class="post-heading item item-text-wrap">
+      <h1 class="post-title">Reset Microsoft Intune's Mobile Device Management Authority</h1>
+      <p class="post-author">
+        By <span>Jesse Garcia</span> <span> - October 09, 2015</span>
+      </p>
+    </div>
+    <div class="post-content item item-text-wrap" post-content>
+      <p class="post-text">When an IT administrator deploys a brand new Microsoft Intune subscription there is an important decision that needs to be made. That decision is whether to make Microsoft Intune or System Center 2012 Configuration Manager your Mobile Device Management Authority. The route you choose will be influenced by such things as the size of your environment, whether you already own Configuration Manager and have it deployed, whether you want new Intune features immediately, and whether or not you want to manage all your devices from a single console.</p>
+<p class="post-text">So what if you chose a path and later decide you need to go a different route? As of this blog writing you will need to call Microsoft and have your subscription reset. Here are the basic steps you will want to follow. Our example was a situation where Intune was integrated with Configuration Manager, but the company wanted to move in the direction of Microsoft Intune in a standalone configuration instead.</p>
+    
+    <img class="padding-horizontal"src="http://www.concurrency.com/wp-content/uploads/2015/10/IntuneMDMAuthority.png">
+    <ol class="post-text">
+      <li>Make sure you really want to start over. This process will result in your Intune Subscription being wiped clean.</li>
+      <li>For ease, make sure you are a Global Administrator for your company’s Microsoft Online Services. Microsoft will ask you about this during your call.</li>
+      <li>Call Microsoft Intune Support. If you’re in the United States you can call 800-865-9408. Otherwise, find the correct support number for your country here: https://technet.microsoft.com/en-us/library/jj839713.aspx.</li>
+    </ol> 
+    </div>
+    <div class="post-tags item item-text-wrap">
+      <span class="post-tag button button-small button-outline button-stable" >ENTERPRISE MOBILITY</span>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="post-footer bar bar-footer bar-dark">
+    <div class="row">
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-plus" bigger-text=".post-view .post-text">A</a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon icon-right ion-minus" smaller-text=".post-view .post-text">A</a>
+      </div>
+      <div class="col col-20 col-offset-20 col-center">
+        <a class="button button-icon icon ion-heart"></a>
+      </div>
+      <div class="col col-20 col-center">
+        <a class="button button-icon icon ion-android-share-alt" ng-click="sharePost(post.url)"></a>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>
